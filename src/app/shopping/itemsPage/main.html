@@ -1,1 +1,10 @@
 items page
+<!--md-list[ng-controller="itemsController"]>md-list-item[ng-repeat="item in items.itemList"]>p{{{item.name}}}+md-input-container.md-secondary>input[ng-model=item.count]-->
+<md-list ng-controller="ItemsPageController">
+  <md-list-item ng-repeat="item in items.itemList">
+    <p>{{item.name}}</p>
+    <md-input-container class="md-secondary">
+      <input type="number" step="1" ng-model="item.count">
+    </md-input-container>
+  </md-list-item>
+</md-list>

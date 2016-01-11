@@ -1,1 +1,13 @@
 shop list page
+<md-content flex layout-padding>
+<!--  
+  md-list[ng-controller="shopsController"]>md-list-item[ng-repeat="shop in shops.shopList"]>p{{{shop.name}}}+md-checkbox.md-secondary[ng-model=shop.selected]+md-divider
+  -->
+  <md-list ng-controller="ShopsPageController">
+    <md-list-item ng-repeat="shop in shops.shopList" ng-click="shops.go(shop.id)">
+      <p>{{shop.name}}</p>
+      <md-checkbox class="md-secondary" ng-model="shop.selected"></md-checkbox>
+      <md-divider></md-divider>
+    </md-list-item>
+  </md-list>
+  </md-content>

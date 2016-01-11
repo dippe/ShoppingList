@@ -3,10 +3,10 @@
 
   angular
     .module('shoppingList')
-    .controller('ConfigController', ConfigController);
+    .controller('ConfigPageController', ConfigPageController);
 
   /** ngInject */
-  function ConfigController($log) {
+  function ConfigPageController($log) {
     $log.info('config controller initialized')
   }
   

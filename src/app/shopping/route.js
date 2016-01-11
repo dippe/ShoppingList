@@ -8,25 +8,25 @@
   /** ngInject */
   function shoppingListRouter($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('start', {
-        url: '/',
+      .state('shops', {
+        url: '/shops',
         templateUrl: 'app/shopping/shopsPage/main.html',
-        controller: 'ShopsController',
-        controllerAs: 'shop'
+        controller: 'ShopsPageController',
+        controllerAs: 'shops'
       })
       .state('items', {
-        url: '/items',
+        url: '/shop/:shopId',
         templateUrl: 'app/shopping/itemsPage/main.html',
-        controller: 'ItemsController',
+        controller: 'ItemsPageController',
         controllerAs: 'items'
       })
       .state('config', {
         url: '/config',
         templateUrl: 'app/shopping/configPage/main.html',
-        controller: 'ConfigController',
-        controllerAs: 'config'
+        controller: 'ConfigPageController',
+        controllerAs: 'configs'
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/shops');
   }
 })();
